@@ -1,0 +1,14 @@
+{
+    "name": "Stream-Teax",
+    "version": "1.0.0",
+    "description": "Just a movie streaming app",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "author": "ISG32 [Sapan Gajjar]",
+    "license": "MIT",
+    "devDependencies": {
+        "electron": "^12.2.3"
+    }
+}

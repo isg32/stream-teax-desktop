@@ -1,0 +1,78 @@
+
+<center><h1>    StreamTEAX   </h1>
+<form>
+    <input type="text" id="search" placeholder="Search for a movie...">
+    <button type="submit">Search</button>
+  </form>
+  <body>
+    <button id="previous-tab">Previous Tab</button>
+    ...
+  </body>
+
+<p>
+    Hey this is <a class="site" href="https://isg32.github.io">ISG32</a> and this is My another project<br>
+    based on yet again v2vidsrc server, changalog is very simple...
+</p>
+</center>
+<div>
+<p>Changelog :</p>
+<ul>
+    <li>Added Name Search...</li>
+    <li>This Only works for movies.....</li>
+    <li>u haven't followed me on <a class="site" href="https://instagram.com/bookofromantt">instagram</a> have your????</li>
+    <li>how to use it? just search your movie up there where it says search for a movie.....</li>
+    <li>Also a small note: don't use this on mobile, its horrible....</li>
+</ul>
+</div>
+  <hr>
+  
+  <link rel="stylesheet" href="style.css">
+  <div class="script">
+    <ul id="results"></ul>
+  </div>
+  
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', handleSearch);
+  
+    function handleSearch(event) {
+      event.preventDefault();
+  
+      const query = document.querySelector('#search').value;
+      searchMovies(query);
+    }
+  
+    function searchMovies(query) {
+      const apiKey = '268254480cb16045a8ac207af760e448';
+      const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(query)}`;
+  
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          const results = document.querySelector('#results');
+          results.innerHTML = '';
+  
+          data.results.forEach(movie => {
+            const poster = movie.poster_path ? `https://image.tmdb.org/t/p/w185${movie.poster_path}` : 'https://via.placeholder.com/185x278?text=No+Poster';
+            const li = document.createElement('li');
+            li.innerHTML = `
+              <h2>${movie.title}</h2>
+              <centre><img src="${poster}"></centre>
+              <p>${movie.overview}</p>
+              <a href="https://v2.vidsrc.me/embed/${movie.id}">[ Streaming link ]</a><br>
+            `;
+            results.appendChild(li);
+          });
+        })
+        .catch(error => console.error(error));
+    }
+  </script>
+  
+</center>
+<footer>
+<p id="footer-note">
+  &copy Copyright 2022
+  <a href="https://isg32.github.io/">Sapan Gajjar</a>.
+  All rights reserved.
+    </p>
+  </footer>

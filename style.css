@@ -1,0 +1,90 @@
+body{
+    max-width: 700px;
+    margin: auto;
+    }
+    
+    img {
+      border-radius: 10px;
+      align-self: right;
+    }
+    
+    .greenpad {
+    color: grey;
+    background: #D4E2BE;
+    padding:5px;
+    border-radius:5px;
+    }
+    
+    p {
+    background-color: #D4E2BE;
+    font-family: 'plain';
+    font-size: 17px;
+    padding:5px;
+    border-radius:5px;
+    text-align: justify;
+    }
+
+    h1 {
+    color: #B6CC75;
+    font: 35px "mine"; 
+    text-align: center;
+    }
+
+    h2 {
+    color: #000;
+    font: 25px "plain";
+    text-transform: uppercase;
+    background-color: #dee2be29;
+    padding:5px;
+    border-radius:5px;
+    
+    }
+    
+    h3 {
+    color: #B6CC75;
+    font: 35px "mine";
+    text-align: center;
+    }
+    
+    a {
+    text-decoration: none;
+    color: #699A3C;
+    text-align: center;
+    }
+    
+    .site:hover {
+    text-decoration: underline;
+    color: #699A3C;
+    text-align: center;  
+    font-style: italic;
+    }
+    
+    .site {
+    border-bottom-width: 2px;  
+    border-bottom-style: dashed;
+    }
+    
+    .site:visited {
+    text-decoration: none;
+    color: #699A3C;
+    text-align: center;
+    }
+    
+    .h1c {
+    color: #699A3C;
+    font: 35px "porkys";
+    border-bottom-width: 2px;  
+    border-bottom-style: dashed;
+    text-transform: lowercase;
+    }
+    
+    
+    h4 {
+    color: #699A3C;
+    font: 18px "porkys";
+    text-align: justify;
+    }
+    .h11 {
+    color: #699A3C;
+    font: 35px "porkys";
+    }
